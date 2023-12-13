@@ -70,9 +70,15 @@ Ofruesi i kërkuar: [:libvirt]
 
 duhet te veproni si me poshte:
 mkdir -p ~/tmp/
+
 cd ~/tmp/
+
 git clone https://github.com/jcf/vagrant-libvirt
+
 cd ./vagrant-libvirt/
+
 git checkout upgrade-nokogiri
+
 gem build vagrant-libvirt.gemspec
+
 vagrant plugin install  ~/tmp/vagrant-libvirt/vagrant-libvirt-*.gem
