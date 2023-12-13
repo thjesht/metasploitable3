@@ -17,6 +17,7 @@ sudo rm /usr/local/bin/packer
 sudo rm /usr/bin/packer
 
 sudo apt --purge remove virtualbox
+
 sudo apt --purge remove virtualbox*
 
 sudo rm ~/"VirtualBox VMs" -Rf
