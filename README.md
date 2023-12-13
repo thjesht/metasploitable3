@@ -10,10 +10,9 @@ Metasploitable3 lëshohet nën një licencë të stilit BSD.
 1=> Si fillim nese keni instaluar paketues dhe virtualbox ne sistemin tuaj, kali linux ose debian!
 duhet ti c`istaloni dhe te pastorni cachen e ktyre software dhe te hapat e me poshtme.
 
-udo apt --purge remove packer
-
-sudo rm ~/usr/local/bin/packer
-sudo rm ~/usr/bin/packer
+sudo apt --purge remove packer
+sudo rm /usr/local/bin/packer
+sudo rm /usr/bin/packer
 
 sudo apt --purge remove virtualbox
 sudo apt --purge remove virtualbox*
