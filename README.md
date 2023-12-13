@@ -1,2 +1,79 @@
 # metasploitable3
 Metasploitable3 install on kali linux or debian
+
+Metasploitable3 është një VM që është ndërtuar nga themeli me një sasi të madhe dobësish sigurie.
+Ai synohet të përdoret si një objektiv për testimin e shfrytëzimeve me metasploit.
+
+Metasploitable3 lëshohet nën një licencë të stilit BSD. 
+
+
+1=> Si fillim nese keni instaluar paketues dhe virtualbox ne sistemin tuaj, kali linux ose debian!
+duhet ti c`istaloni dhe te pastorni cachen e ktyre software dhe te hapat e me poshtme.
+
+sudo apt --pastroj heq paketuesin
+
+sudo rm ~/usr/local/bin/packer
+sudo rm ~/usr/bin/packer
+
+sudo apt --pastroj heq kutinë virtuale
+sudo apt --pastroj heq kutinë virtuale*
+
+sudo rm ~/"VM-të VirtualBox" -Rf
+
+sudo rm ~/.config/VirtualBox -Rf
+
+
+duhet ti c`istaloni dhe te pastorni cachen e ktyre software dhe te hapat e me poshtme.
+
+2=> Nese nuk i keni instaluar keto ater beni skip pjesen e mesiperme dhe fillon me komandat e me poshtme:
+
+sudo apt instaloni virtualbox-qt
+
+sudo apt-get instalo libvirt-daemon libvirt-klientët virt-manager python3-libvirt vagrant vagrant-libvirt
+
+3=> Me pas duhet te krijojme nje file me emrin networks.conf per te assign ip per host-only per virtualbox:
+
+mkdir /etc/vbox
+
+4=> pastaj do krijojme nje file te ri me emrin si me siper:
+
+sudo prekje /etc/vbox/networks.conf
+
+5=> do editojme filen e ri qe krijuarm dhe do vendosim :
+
+sudo nano /etc/vbox/networks.conf
+
+* 0.0.0.0/0 ::/0
+
+dhe pas ctrl + x dhe yes
+
+6=> paster duhet te krijojme nje direktori me komandat e meposhteme:
+
+mkdir metasploitable3-hapësirë pune
+cd metasploitable3-space pune
+curl -O https://raw.githubusercontent.com/rapid7/metasploitable3/master/Vagrantfile && vagrant up
+
+7=> pasti te mbaroj procedura e instalimit te ubuntu server do te beni nje komande tjeter per installimin e windows server
+
+vagrant up --provider virtualbox
+
+dhe te dy sistemet jane aktive!
+
+
+PS:
+
+nese do keni error te tjera te tipit :
+
+Emri: rapid7/metasploitable3-win2k8
+Adresa: https://vagrantcloud.com/rapid7/metasploitable3-win2k8
+Ofruesi i kërkuar: [:libvirt]
+
+duhet te veproni si me poshte:
+
+mkdir -p ~/tmp/
+cd ~/tmp/
+klon git https://github.com/jcf/vagrant-libvirt
+cd ./vagrant-libvirt/
+përmirësimi i git arka-nokogiri
+gur i çmuar ndërtoj vagrant-libvirt.gemspec
+instalimi i shtojcës vagrant ~/tmp/vagrant-libvirt/vagrant-libvirt-*.gem
