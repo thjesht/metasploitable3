@@ -69,11 +69,10 @@ Adresa: https://vagrantcloud.com/rapid7/metasploitable3-win2k8
 Ofruesi i kërkuar: [:libvirt]
 
 duhet te veproni si me poshte:
-
 mkdir -p ~/tmp/
 cd ~/tmp/
-klon git https://github.com/jcf/vagrant-libvirt
+git clone https://github.com/jcf/vagrant-libvirt
 cd ./vagrant-libvirt/
-përmirësimi i git arka-nokogiri
-gur i çmuar ndërtoj vagrant-libvirt.gemspec
-instalimi i shtojcës vagrant ~/tmp/vagrant-libvirt/vagrant-libvirt-*.gem
+git checkout upgrade-nokogiri
+gem build vagrant-libvirt.gemspec
+vagrant plugin install  ~/tmp/vagrant-libvirt/vagrant-libvirt-*.gem
