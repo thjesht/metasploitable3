@@ -11,7 +11,9 @@ Metasploitable3 lëshohet nën një licencë të stilit BSD.
 duhet ti c`istaloni dhe te pastorni cachen e ktyre software dhe te hapat e me poshtme.
 
 sudo apt --purge remove packer
+
 sudo rm /usr/local/bin/packer
+
 sudo rm /usr/bin/packer
 
 sudo apt --purge remove virtualbox
