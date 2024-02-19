@@ -86,3 +86,7 @@ git checkout upgrade-nokogiri
 gem build vagrant-libvirt.gemspec
 
 vagrant plugin install  ~/tmp/vagrant-libvirt/vagrant-libvirt-*.gem
+
+========
+
+vagrant plugin install winrm winrm-fs
